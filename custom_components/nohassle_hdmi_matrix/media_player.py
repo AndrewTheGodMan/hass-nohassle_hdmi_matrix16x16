@@ -43,10 +43,10 @@ SERVICE_SETZONE_SCHEMA = MEDIA_PLAYER_SCHEMA.extend({
     vol.Required(ATTR_SOURCE): cv.string
 })
 
-# Valid zone ids: 1-8
+# Valid zone ids: 1-16
 ZONE_IDS = vol.All(vol.Coerce(int), vol.Range(min=1, max=16))
 
-# Valid source ids: 1-8
+# Valid source ids: 1-16
 SOURCE_IDS = vol.All(vol.Coerce(int), vol.Range(min=1, max=16))
 
 PLATFORM_SCHEMA = vol.All(
