@@ -44,10 +44,10 @@ SERVICE_SETZONE_SCHEMA = MEDIA_PLAYER_SCHEMA.extend({
 })
 
 # Valid zone ids: 1-8
-ZONE_IDS = vol.All(vol.Coerce(int), vol.Range(min=1, max=8))
+ZONE_IDS = vol.All(vol.Coerce(int), vol.Range(min=1, max=16))
 
 # Valid source ids: 1-8
-SOURCE_IDS = vol.All(vol.Coerce(int), vol.Range(min=1, max=8))
+SOURCE_IDS = vol.All(vol.Coerce(int), vol.Range(min=1, max=16))
 
 PLATFORM_SCHEMA = vol.All(
     cv.has_at_least_one_key(CONF_HOST),
